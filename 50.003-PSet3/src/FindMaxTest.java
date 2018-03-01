@@ -1,5 +1,3 @@
-
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -14,8 +12,7 @@ public class FindMaxTest {
    @Test
    public void testFail() {
 	   int test = FindMax.max(new int[] {1,6,5,4,20});
-	   assertTrue(test == 20);
-	   System.out.println(test);   		
+	   assertTrue(test == 20);   		
    }
    
    @Test
