@@ -27,7 +27,8 @@ public class StackTest {
 		System.out.println("setting down");
 	}
 
-	@Test public void testToString()
+	@Test 
+	public void testToString()
 	{
 		System.out.println("testing");
 	   stack.push(new Integer(1));
@@ -35,20 +36,41 @@ public class StackTest {
 	   assertEquals ("{2, 1}", stack.toString());
 	}
 	
-	@Test public void testRepOk()
+	@Test 
+	public void testRepOk1()
 	{
+		//test the condition of repOk 2. this will go into the second if loop and return false
+		//because when stack is initialized it is empty (true) &&  it does not have more elements (false)= false
 	   boolean result = stack.repOK();
-	   assertEquals (true, result);
-	   stack.push (new Integer (1));
-	   result = stack.repOK();
-	   assertEquals (true, result);
-	   stack.pop();
-	   result = stack.repOK();
-	   assertEquals (true, result);
-	   stack.push (new Integer (1));
-	   stack.pop();
-	   result = stack.repOK();
-	   assertEquals (true, result);
+	   assertEquals (false, result);
 	}
-
+	   
+	
+	@Test 
+	public void testRepOk2()
+	{
+		stack.push (new Integer (1)); //
+		boolean result = stack.repOK();
+		assertEquals (true, result);
+	}
+	
+	@Test 
+	public void testRepOk3()
+	{
+		stack.push (new Integer (1));
+		stack.pop();
+		boolean result = stack.repOK();
+		assertEquals (true, result);
+		
+	}
+	//TODO: Do i even add this in? WTF
+	@Test 
+	public void testRepOk4()
+	{
+		stack.pop();
+		boolean result = stack.repOK();
+		assertEquals (true, result);
+		
+	}
+	
 }

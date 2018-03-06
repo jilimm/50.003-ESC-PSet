@@ -29,10 +29,6 @@ public class QuickSortTest {
    @Test public void quickSortTest() { 
 	   QuickSort test = new QuickSort();
 	   test.sort(unsorted);
-	   /*
-	   //somehow this fucks up and always gives me memory
-	   assertEquals(Arrays.asList(sorted),Arrays.asList(test.getArray()));
-	   */
 	   for (int i=0; i<sorted.length;i++) {
 		   assertEquals(sorted[i], test.getArray()[i]);
 	   }
